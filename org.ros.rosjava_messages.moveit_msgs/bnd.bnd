@@ -1,0 +1,13 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.actionlib_msgs,\
+	org.ros.rosjava_messages.sensor_msgs,\
+	org.ros.rosjava_messages.geometry_msgs,\
+	org.ros.rosjava_messages.std_msgs,\
+	org.ros.rosjava_messages.trajectory_msgs;version=latest,\
+	org.ros.rosjava_messages.shape_msgs,\
+	org.ros.rosjava_messages.object_recognition_msgs,\
+	org.ros.rosjava_messages.octomap_msgs	
+Bundle-Version: 0.7.5
+Bundle-Name: moveit_msgs
+Export-Package: moveit_msgs

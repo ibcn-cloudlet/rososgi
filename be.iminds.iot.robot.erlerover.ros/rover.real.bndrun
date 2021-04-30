@@ -1,0 +1,16 @@
+-include ../be.iminds.iot.ros.core/core.bndrun
+
+-runbundles.rover: \
+	org.ros.rosjava_messages.mavros_msgs;version='[0.17.3,0.18)',\
+	be.iminds.iot.ros.configurator;version=latest,\
+	be.iminds.iot.ros.range;version=latest,\
+	be.iminds.iot.sensor.range.ros;version=latest,\
+	be.iminds.iot.robot.erlerover.ros;version=latest,\
+	be.iminds.iot.keyboard.servlet;version=latest,\
+	be.iminds.iot.robot.input.keyboard;version=latest
+
+
+
+# launching APM and mavros from OSGi is not working atm - launch separately
+#	be.iminds.iot.ros.erlerover;version=latest,\
+	

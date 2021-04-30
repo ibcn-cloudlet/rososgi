@@ -1,0 +1,91 @@
+/*
+ * Master Gradle build script
+ *
+ * Depends on bndPlugin property set by settings.gradle.
+ * and bnd_* values from gradle.properties.
+ */
+
+import aQute.bnd.build.Workspace
+import aQute.bnd.osgi.Constants
+
+/* Add bnd gradle plugin as a script dependency */
+buildscript {
+  dependencies {
+    classpath bndPlugin
+  }
+}
+
+/* Initialize the bnd workspace */
+Workspace.setDriver(Constants.BNDDRIVER_GRADLE)
+Workspace.addGestalt(Constants.GESTALT_BATCH, null)
+ext.bndWorkspace = new Workspace(rootDir, bnd_cnf)
+if (bndWorkspace == null) {
+  throw new GradleException("Unable to load workspace ${rootDir}/${bnd_cnf}")
+}
+
+ext.cnf = rootProject.project(bnd_cnf)
+
+
+def runCommand(String[] args) {
+ new ByteArrayOutputStream().withStream { os ->
+  def result = exec {
+   commandLine = args
+   standardOutput = os
+  }
+  return os.toString().trim()
+ }
+}
+
+ext {
+	cnf = rootProject.project(bnd_cnf)
+	os = System.env.OS ?: runCommand('uname', '-s')
+	arch = System.env.ARCH ?: runCommand('uname', '-m')
+	osgi_os = os.replaceFirst(/^Darwin/, "MacOSX")
+	osgi_arch = arch.replaceFirst(/(?i)arm(.*)/,"ARM")
+	extension = (os == "Darwin") ? 'dylib' : 'so'
+}
+
+/* Configure the subprojects */
+subprojects {
+  def bndProject = bndWorkspace.getProject(name)
+  if (bndProject != null) {
+    plugins.apply 'biz.aQute.bnd'
+  
+  
+    task("cleanAll", description: "Clean all code including all (sub)native libraries.", group: 'build') {}
+	cleanAll.dependsOn(clean)
+
+	fileTree(projectDir) {
+		include 'jni/Makefile'
+	}.each { File file ->
+		logger.info "Found Makefile in jni folder: {}", file.absolutePath
+		task("buildNative", type: Exec, description: "Build native code", group: "build") {
+			def outputExtentions = ["*.o","*.dylib","*.so","*.a", "*_*.h"]
+			inputs.files compileJava
+			inputs.files fileTree(dir: file.parent, excludes: outputExtentions)
+			outputs.dir "$projectDir/native/$os/$arch"
+			outputs.files fileTree(dir: file.parent, includes: outputExtentions)
+			workingDir file.parent
+			commandLine "make"
+		}
+		jar.dependsOn("buildNative")
+		
+		task("cleanNative", type: Exec, description: "Clean dynamic libraries.", group: 'build') {
+			workingDir file.parent
+			commandLine "make", "clean"
+			standardOutput = new ByteArrayOutputStream()
+		}
+		clean.dependsOn("cleanNative")
+		
+		task("cleanAllNative", type: Exec, description: "Clean all native code including sub projects.", group: 'build') {
+			workingDir file.parent
+			commandLine "make", "cleanall"
+			standardOutput = new ByteArrayOutputStream()
+		}
+		cleanAll.dependsOn("cleanAllNative")
+	}
+  }     
+}
+
+
+    

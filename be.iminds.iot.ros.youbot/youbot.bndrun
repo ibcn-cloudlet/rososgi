@@ -1,0 +1,10 @@
+-include ../be.iminds.iot.ros.core/core.bndrun
+
+-runbundles.youbot: \
+	org.ros.rosjava_messages.brics_actuator;version='[0.7,0.8)',\
+	be.iminds.iot.ros.configurator;version=latest,\
+	be.iminds.iot.ros.youbot;version=latest,\
+	be.iminds.iot.robot.youbot.ros;version=latest,\
+	be.iminds.iot.robot.input;version=latest,\
+	be.iminds.iot.ros.range;version=latest,\
+	be.iminds.iot.sensor.range.ros;version=latest

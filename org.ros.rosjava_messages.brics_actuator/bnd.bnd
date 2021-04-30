@@ -1,0 +1,6 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.geometry_msgs
+Bundle-Version: 0.7.0
+Export-Package: brics_actuator
+Bundle-Name: brics_actuator_msgs

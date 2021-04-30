@@ -1,0 +1,5 @@
+-buildpath: \
+	org.ros.rosjava.message_generation
+Bundle-Version: 1.11.1
+Bundle-Name: std_srvs
+Export-Package: std_srvs

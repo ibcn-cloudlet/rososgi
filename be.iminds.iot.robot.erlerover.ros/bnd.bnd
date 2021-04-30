@@ -1,0 +1,15 @@
+-buildpath: \
+	osgi.core;version=5.0,\
+	osgi.promise,\
+	osgi.enterprise;version=5.0,\
+	org.ros.rosjava_messages.mavros_msgs;version=latest,\
+	org.ros.rosjava,\
+	be.iminds.iot.ros.api;version=latest,\
+	be.iminds.iot.robot.api;version=latest,\
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.sensor_msgs,\
+	org.ros.rosjava_messages.geometry_msgs
+Bundle-Version: 0.3.0
+Private-Package: be.iminds.iot.robot.erlerover.ros
+Export-Package: be.iminds.iot.robot.api,\
+				be.iminds.iot.robot.api.rover

@@ -1,0 +1,7 @@
+-includeresource: res=resources
+Private-Package: be.iminds.iot.robot.input.servlet
+Export-Package: \
+	be.iminds.iot.robot.api,\
+	be.iminds.iot.robot.api.arm,\
+	be.iminds.iot.robot.api.omni,\
+	be.iminds.iot.robot.api.rover

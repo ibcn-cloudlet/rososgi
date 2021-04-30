@@ -1,0 +1,5 @@
+Bundle-Version: 0.2.0
+-buildpath: osgi.promise
+Export-Package: \
+	be.iminds.iot.input.keyboard.api,\
+	be.iminds.iot.input.joystick.api

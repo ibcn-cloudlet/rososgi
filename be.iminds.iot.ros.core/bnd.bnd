@@ -1,0 +1,8 @@
+Bundle-Version: 0.3.0
+-buildpath: \
+	osgi.core;version=5.0,\
+	osgi.enterprise;version=5.0,\
+	be.iminds.iot.ros.api;version=latest,\
+	org.ros.rosjava;version=0.2
+Private-Package: be.iminds.iot.ros.core
+Export-Package: be.iminds.iot.ros.api

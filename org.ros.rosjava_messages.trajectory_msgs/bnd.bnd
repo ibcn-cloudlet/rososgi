@@ -1,0 +1,7 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.geometry_msgs,\
+	org.ros.rosjava_messages.std_msgs
+Bundle-Version: 1.11.7
+Bundle-Name: trajectory_msgs
+Export-Package: trajectory_msgs

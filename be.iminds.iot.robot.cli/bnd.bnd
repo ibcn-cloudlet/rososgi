@@ -1,0 +1,12 @@
+-buildpath: \
+	osgi.core;version=5.0,\
+	osgi.promise,\
+	osgi.enterprise;version=5.0,\
+	be.iminds.iot.robot.api;version=latest
+Bundle-Version: 0.1.0
+Private-Package: be.iminds.iot.robot.cli
+Export-Package: \
+	be.iminds.iot.robot.api,\
+	be.iminds.iot.robot.api.arm,\
+	be.iminds.iot.robot.api.omni,\
+	be.iminds.iot.robot.api.rover

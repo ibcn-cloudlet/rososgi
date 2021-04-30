@@ -1,0 +1,8 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.geometry_msgs,\
+	org.ros.rosjava_messages.std_msgs,\
+	org.jboss.netty
+Bundle-Version: 0.3.3
+Bundle-Name: octomap_msgs
+Export-Package: octomap_msgs

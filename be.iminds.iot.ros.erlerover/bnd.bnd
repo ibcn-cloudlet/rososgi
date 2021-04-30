@@ -1,0 +1,12 @@
+Bundle-Version: 0.4.0
+-buildpath: \
+	osgi.core;version=5.0,\
+	osgi.enterprise;version=5.0,\
+	org.ros.rosjava,\
+	org.ros.rosjava.message_generation,\
+	be.iminds.iot.ros.api;version=latest,\
+	org.ros.rosjava_messages.sensor_msgs,\
+	org.jboss.netty
+Private-Package: \
+	be.iminds.iot.ros.util,\
+	be.iminds.iot.ros.erlerover

@@ -1,0 +1,6 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.geometry_msgs
+Bundle-Version: 1.11.9
+Bundle-Name: shape_msgs
+Export-Package: shape_msgs

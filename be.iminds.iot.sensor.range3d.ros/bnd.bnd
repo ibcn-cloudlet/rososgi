@@ -1,0 +1,12 @@
+-buildpath: \
+	osgi.core;version=5.0,\
+	osgi.enterprise;version=5.0,\
+	org.ros.rosjava,\
+	org.ros.rosjava.message_generation,\
+	be.iminds.iot.ros.api;version=latest,\
+	org.ros.rosjava_messages.sensor_msgs,\
+	org.jboss.netty,\
+	be.iminds.iot.sensor.api;version=latest
+Bundle-Version: 0.1.0
+Private-Package: be.iminds.iot.sensor.range3d.ros
+Export-Package: be.iminds.iot.sensor.api

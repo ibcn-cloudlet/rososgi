@@ -1,0 +1,11 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.actionlib_msgs,\
+	org.ros.rosjava_messages.geometry_msgs,\
+	org.ros.rosjava_messages.trajectory_msgs,\
+	org.ros.rosjava_messages.std_msgs
+Bundle-Version: 1.3.1
+Bundle-Name: control_msgs
+Export-Package: \
+	control_msgs,\
+	controller_manager_msgs

@@ -1,0 +1,9 @@
+-buildpath: \
+	osgi.core;version=5.0,\
+	osgi.promise,\
+	osgi.enterprise;version=5.0,\
+	be.iminds.iot.robot.api;version=latest,\
+	org.apache.felix.http.servlet-api,\
+	be.iminds.iot.input.api;version=latest
+Bundle-Version: 0.3.0
+-sub: *.bnd

@@ -1,0 +1,6 @@
+-include ../be.iminds.iot.ros.core/core.bndrun
+
+-runbundles.camera: \
+	be.iminds.iot.ros.configurator;version=latest,\
+	be.iminds.iot.ros.camera;version=latest,\
+	be.iminds.iot.sensor.camera.ros;version=latest

@@ -1,0 +1,8 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.geometry_msgs,\
+	org.ros.rosjava_messages.std_msgs,\
+	org.jboss.netty
+Bundle-Version: 0.17.3
+Export-Package: mavros_msgs
+Bundle-Name: mavros_msgs

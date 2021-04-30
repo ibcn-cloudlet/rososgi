@@ -1,0 +1,6 @@
+-include ../be.iminds.iot.ros.core/core.bndrun
+
+-runbundles.range: \
+	be.iminds.iot.ros.configurator;version=latest,\
+	be.iminds.iot.ros.range;version=latest,\
+	be.iminds.iot.sensor.range.ros;version=latest

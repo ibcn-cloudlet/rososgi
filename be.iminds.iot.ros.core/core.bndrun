@@ -1,0 +1,71 @@
+aiolos.version='[0.6.0,0.7.0)'
+
+-runfw: org.eclipse.concierge
+
+-runbundles.core: \
+	osgi.promise;version='[6.0.0,6.1.0)',\
+	org.apache.felix.gogo.command;version='[0.14.0,0.15)',\
+	org.apache.felix.gogo.runtime;version='[0.16.2,0.17)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.11)',\
+	org.apache.felix.configadmin;version='[1.8.2,1.9)',\
+	org.apache.felix.eventadmin;version='[1.4.2,1.5)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.metatype;version='[1.0.10,1.1)',\
+	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
+	org.apache.felix.http.api;version='[2.3.2,2.4)',\
+	org.apache.felix.http.jetty;version='[2.3.2,2.4)',\
+	org.apache.felix.http.servlet-api;version='[1.0.1,1.1)',\
+	org.apache.felix.http.whiteboard;version='[2.3.2,2.4)',\
+	com.google.guava;version='[12.0,13.0)',\
+	org.jboss.netty;version='[3.5,4)',\
+	org.apache.commons.logging;version='[1.1,2)',\
+	org.apache.commons.net;version='[2.0,3)',\
+	org.apache.commons.httpclient;version='[3.1,4)',\
+	org.apache.commons.codec;version='[1.3,2.0)',\
+	org.apache.commons.io;version='[1.4,2.0)',\
+	org.apache.commons.lang;version='[2.6,3)',\
+	org.apache.commons.pool;version='[1.6,2)',\
+	ws-commons-util;version='[1.0.1,1.0.2)',\
+	org.ros.rosjava_core.apache_xmlrpc_common;version='[0.2.1,0.2.2)',\
+	org.ros.rosjava_core.apache_xmlrpc_client;version='[0.2.1,0.2.2)',\
+	org.ros.rosjava_core.apache_xmlrpc_server;version='[0.2.1,0.2.2)',\
+	org.ros.rosjava;version='[0.2.2,0.2.3)',\
+	org.ros.rosjava.message_generation;version='[0.2.1,0.2.2)',\
+	org.ros.rosjava_messages.rosgraph_msgs;version='[1.11.1,1.12)',\
+	org.ros.rosjava_messages.std_msgs;version='[0.5.9,0.6)',\
+	org.ros.rosjava_messages.std_srvs;version='[1.11.1,1.11.2)',\
+	org.ros.rosjava_messages.geometry_msgs;version='[1.11.7,1.11.8)',\
+	org.ros.rosjava_messages.sensor_msgs;version='[1.11.7,1.11.8)',\
+	be.iminds.iot.ros.core;version=latest
+	
+	
+#	be.iminds.iot.ros.test.pub;version=latest,\
+#	be.iminds.iot.ros.test.sub;version=latest
+	
+-runsystempackages:\
+	javax.naming,\
+	javax.net,\
+	javax.net.ssl,\
+	javax.sql,\
+	javax.xml,\
+	javax.xml.parsers,\
+	javax.xml.namespace,\
+	javax.xml.bind,\
+	javax.crypto,\
+	javax.crypto.spec,\
+	org.xml.sax,\
+	org.xml.sax.ext,\
+	org.xml.sax.helpers,\
+	org.w3c.dom,\
+	javax.annotation,\
+	javax.annotation.meta,\
+	javax.management,\
+	javax.management.modelmbean,\
+	javax.management.remote,\
+	javax.security.auth,\
+	javax.security.cert,\
+	javax.imageio,\
+	javax.imageio.stream,\
+	javax.imageio.plugins.jpeg,\
+	javax.tools
+	

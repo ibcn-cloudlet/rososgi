@@ -1,0 +1,6 @@
+Private-Package: be.iminds.iot.robot.input.joy
+Export-Package: \
+	be.iminds.iot.robot.api.arm,\
+	be.iminds.iot.robot.api.omni,\
+	be.iminds.iot.robot.api.rover,\
+	be.iminds.iot.robot.api

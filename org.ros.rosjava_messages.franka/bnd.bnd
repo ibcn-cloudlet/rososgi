@@ -1,0 +1,10 @@
+-buildpath: \
+	org.ros.rosjava.message_generation,\
+	org.ros.rosjava_messages.std_msgs,\
+	org.ros.rosjava_messages.actionlib_msgs;version=latest
+Bundle-Version: 0.1.2
+Bundle-Name: franka
+Export-Package: \
+	franka_msgs,\
+	franka_control,\
+	franka_gripper

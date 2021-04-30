@@ -1,0 +1,20 @@
+-include ../be.iminds.iot.ros.core/core.bndrun
+
+-runbundles.moveit: \
+	be.iminds.iot.ros.configurator;version=latest,\
+    org.ros.rosjava_messages.actionlib_msgs;version=latest,\
+	org.ros.rosjava_messages.moveit_msgs;version=latest,\
+	org.ros.rosjava_messages.object_recognition_msgs;version=latest,\
+	org.ros.rosjava_messages.octomap_msgs;version=latest,\
+	org.ros.rosjava_messages.shape_msgs;version=latest,\
+	org.ros.rosjava_messages.trajectory_msgs;version=latest,\
+	org.ros.rosjava_messages.control_msgs;version=latest,\
+	be.iminds.iot.robot.moveit;version=latest
+
+-runbundles.panda: \
+	be.iminds.iot.robot.cli,\
+	be.iminds.iot.ros.panda,\
+	be.iminds.iot.robot.moveit;version=latest
+
+-runproperties.panda: \
+	ros.core.native=true

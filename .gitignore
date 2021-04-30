@@ -1,0 +1,9 @@
+/.gradle/
+/reports/
+/generated/
+/.metadata/
+/.recommenders/
+index.xml
+index.xml.sha
+
+RemoteSystemsTempFiles
